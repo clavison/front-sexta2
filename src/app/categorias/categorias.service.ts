@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CategoriasService {
 
-  categoriasURL = 'http://localhost:8080/categorias';
+  categoriasURL = 'https://pweb-sexta-8023.herokuapp.com/categorias';
   categoriasURLFiltro = this.categoriasURL;
 
   constructor(

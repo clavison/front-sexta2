@@ -7,7 +7,7 @@ import { Produto } from './model';
 })
 export class ProdutosService {
 
-  produtosURL = 'http://localhost:8080/produtos';
+  produtosURL = 'https://pweb-sexta-8023.herokuapp.com/produtos';
 
   constructor(private http: HttpClient) { }
 

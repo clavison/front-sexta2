@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { Cidade } from './model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -7,7 +8,7 @@ import { Injectable } from '@angular/core';
 })
 export class CidadesService {
 
-  cidadesURL = 'https://pweb-sexta-8023.herokuapp.com/cidades';
+  cidadesURL = environment.url+'/cidades';
 
   constructor(
     private http: HttpClient
@@ -18,7 +19,7 @@ export class CidadesService {
   }
 
   listarUf(): Promise<any> {
-    return this.http.get<any>('https://pweb-sexta-8023.herokuapp.com/estados').toPromise();
+    return this.http.get<any>(environment.url+'/estados').toPromise();
   }
 
   excluir(id:number):Promise<void>{

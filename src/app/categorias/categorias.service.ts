@@ -1,13 +1,14 @@
 import { Categoria } from './model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CategoriasService {
 
-  categoriasURL = 'https://pweb-sexta-8023.herokuapp.com/categorias';
+  categoriasURL = environment.url+'/categorias';
   categoriasURLFiltro = this.categoriasURL;
 
   constructor(

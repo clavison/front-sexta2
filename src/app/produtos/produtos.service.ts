@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Produto } from './model';
@@ -7,7 +8,7 @@ import { Produto } from './model';
 })
 export class ProdutosService {
 
-  produtosURL = 'https://pweb-sexta-8023.herokuapp.com/produtos';
+  produtosURL = environment.url+'/produtos';
 
   constructor(private http: HttpClient) { }
 
